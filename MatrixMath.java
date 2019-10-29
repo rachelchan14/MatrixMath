@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 /**
  * Write a description of class MatrixMath here.
  *
@@ -8,17 +8,23 @@
 public class MatrixMath
 {
     // instance variables - replace the example below with your own
-    private int[][] data;
-
+    private static int[][] data = {{1,2,3}, {2,1,0}, {1,0,2}};
+    
+public static String toString(int[] array)
+{
+    return Arrays.toString(array);
+}
+public static String toString(double[] array)
+{
+    return Arrays.toString(array);
+}
     /**
      * Constructor for objects of class MatrixMath
      */
     public MatrixMath(int[][] data)
     {
-        // initialise instance variables
-       
-    }
-
+    
+}
     /**
      * Find the sum of all the elements in each row.
      * 
@@ -27,9 +33,20 @@ public class MatrixMath
      */
     public int[] rowSum()
     {
-        return null;
+        int[] rowSum;
+        rowSum = new int[data.length];
+        int sum = 0;
+        for (int i = 0; i<data.length; i++)
+        {
+            for (int j = 0; j<data.length; j++)
+            {
+                sum+=data[i][j];
+        }
+        rowSum[i] = sum;
+        sum=0;
     }
-    
+    return rowSum;
+}
         /**
      * Find the average of all the values in each row
      *
@@ -37,7 +54,19 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+        double [] rowAve;
+        rowAve = new double[data.length];
+        double sum = 0.0;
+            for (int i = 0; i<data.length; i++)
+        {
+            for (int j = 0; j<data.length; j++)
+            {
+                sum+=data[i][j];
+        }
+        rowAve[i] = sum/data[i].length;
+        sum=0.0;
+    }
+    return rowAve;
     }
     
         /**
@@ -48,7 +77,19 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+            int[] colSum;
+        colSum = new int[data[0].length];
+        int sum = 0;
+        for (int i = 0; i<data.length; i++)
+        {
+            for (int j = 0; j<data.length; j++)
+            {
+                sum+=data[j][i];
+        }
+        colSum[i] = sum;
+        sum=0;
+    }
+    return colSum;
     }
     
      /**
