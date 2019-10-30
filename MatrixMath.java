@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class MatrixMath
 {
     // instance variables - replace the example below with your own
-    private static int[][] data = {{1,2,3}, {2,1,0}, {1,0,2}};
+    private static int[][] data;
     
 public static String toString(int[] array)
 {
