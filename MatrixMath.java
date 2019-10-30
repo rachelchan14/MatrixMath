@@ -23,7 +23,7 @@ public static String toString(double[] array)
      */
     public MatrixMath(int[][] data)
     {
-    
+        this.data = data;
 }
     /**
      * Find the sum of all the elements in each row.
@@ -34,13 +34,13 @@ public static String toString(double[] array)
     public int[] rowSum()
     {
         int[] rowSum;
-        rowSum = new int[data.length];
+        rowSum = new int[(this.data).length];
         int sum = 0;
-        for (int i = 0; i<data.length; i++)
+        for (int i = 0; i<(this.data).length; i++)
         {
-            for (int j = 0; j<data.length; j++)
+            for (int j = 0; j<(this.data)[0].length; j++)
             {
-                sum+=data[i][j];
+                sum+=this.data[i][j];
         }
         rowSum[i] = sum;
         sum=0;
@@ -55,15 +55,15 @@ public static String toString(double[] array)
     public double[] rowAve()
     {
         double [] rowAve;
-        rowAve = new double[data.length];
+        rowAve = new double[this.data.length];
         double sum = 0.0;
-            for (int i = 0; i<data.length; i++)
+            for (int i = 0; i<this.data.length; i++)
         {
-            for (int j = 0; j<data.length; j++)
+            for (int j = 0; j<this.data[0].length; j++)
             {
-                sum+=data[i][j];
+                sum+=this.data[i][j];
         }
-        rowAve[i] = sum/data[i].length;
+        rowAve[i] = sum/this.data[i].length;
         sum=0.0;
     }
     return rowAve;
@@ -78,13 +78,13 @@ public static String toString(double[] array)
     public int[] colSum()
     {
             int[] colSum;
-        colSum = new int[data[0].length];
+        colSum = new int[this.data[0].length];
         int sum = 0;
-        for (int i = 0; i<data.length; i++)
+        for (int i = 0; i<this.data[0].length; i++)
         {
-            for (int j = 0; j<data.length; j++)
+            for (int j = 0; j<this.data.length; j++)
             {
-                sum+=data[j][i];
+                sum+=this.data[j][i];
         }
         colSum[i] = sum;
         sum=0;
@@ -99,7 +99,19 @@ public static String toString(double[] array)
      */
     public double[] colAve()
     {
-        return null;
+                double [] colAve;
+        colAve = new double[this.data[0].length];
+        double sum = 0.0;
+            for (int i = 0; i<this.data[0].length; i++)
+        {
+            for (int j = 0; j<this.data.length; j++)
+            {
+                sum+=this.data[j][i];
+        }
+        colAve[i] = sum/this.data.length;
+        sum=0.0;
+    }
+    return colAve;
     }
     
 }

@@ -21,12 +21,18 @@ public class MatrixMathDriver
         System.out.println(MatrixMath.toString(mathA.rowSum()));
         System.out.println(MatrixMath.toString(mathA.rowAve()));
         System.out.println(MatrixMath.toString(mathA.colSum()));
-        mathA.colAve();
+        System.out.println(MatrixMath.toString(mathA.colAve()));
         
         MatrixMath mathB = new MatrixMath(B);
-        mathB.rowSum();
-        mathB.rowAve();
-        mathB.colSum();
-        mathB.colAve();
+        System.out.println(MatrixMath.toString(mathB.rowSum()));
+        System.out.println(MatrixMath.toString(mathB.rowAve()));
+        System.out.println(MatrixMath.toString(mathB.colSum()));
+        System.out.println(MatrixMath.toString(mathB.colAve()));
+        
+        MatrixMath mathC = new MatrixMath(C);
+        System.out.println(MatrixMath.toString(mathC.rowSum()));
+        System.out.println(MatrixMath.toString(mathC.rowAve()));
+        System.out.println(MatrixMath.toString(mathC.colSum()));
+        System.out.println(MatrixMath.toString(mathC.colAve()));
     }
 }
